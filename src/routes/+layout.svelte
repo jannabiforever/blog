@@ -1,6 +1,6 @@
 <script>
-    import Header from "../components/Header.svelte";
-    import Footer from "../components/Footer.svelte";
+    import Header from "$lib/components/Header.svelte";
+    import Footer from "$lib/components/Footer.svelte";
 </script>
 
 <Header></Header>
@@ -16,6 +16,8 @@
 
         display: block;
         justify-self: center;
+
+        padding: 2.5rem;
 
         background-image: url("../../croco.png");
         background-color: rgba(255, 255, 255, 0.9);
