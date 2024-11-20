@@ -1,15 +1,14 @@
 <div class="profile-container">
     <img src="/profile.jpg" alt="profile" />
     <div class="profile-text">
-        <p>Hello!</p>
-        <p>I'm Jungin Yu from South Korea.</p>
+        <p>Jungin Yu</p>
     </div>
 </div>
 
 <style>
     .profile-container {
         display: flex;
-        justify-content: space-between;
+        gap: 3rem;
     }
 
     .profile-container img {
@@ -19,6 +18,6 @@
     }
 
     .profile-text {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 </style>
