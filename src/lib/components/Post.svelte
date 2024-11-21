@@ -4,7 +4,7 @@
 
 <div class="post-container">
     <div class="post-title">
-        <h2>{post.title}</h2>
+        <h2><a href="/">{post.title}</a></h2>
         <p>{post.createdAt}</p>
     </div>
     <p>{post.content}</p>
@@ -27,6 +27,11 @@
         display: flex;
         align-items: flex-end;
         margin: 0;
+    }
+
+    .post-title h2 a {
+        text-decoration: none;
+        color: black;
     }
 
     .post-title p {
