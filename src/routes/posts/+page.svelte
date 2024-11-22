@@ -1,5 +1,5 @@
 <script>
-    import Post from "$lib/components/PostContainer.svelte";
+    import PostContainer from "$lib/components/PostContainer.svelte";
     import { fetchPosts } from "$lib/fetch-posts";
     import { onMount } from "svelte";
 
@@ -14,7 +14,7 @@
         <p>No Content</p>
     {:else}
         {#each posts as post}
-            <Post {post} />
+            <PostContainer {post} />
         {/each}
     {/if}
 </div>

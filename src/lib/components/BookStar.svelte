@@ -1,6 +1,5 @@
 <script>
-    export let rate;
-
+    let { rate } = $props();
     const full_star = "⭐";
     const empty_star = "☆";
 

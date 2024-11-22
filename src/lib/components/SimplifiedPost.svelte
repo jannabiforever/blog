@@ -1,5 +1,5 @@
 <script>
-    let { posts } = $props();
+    let { post } = $props();
 </script>
 
 <div class="simplified-post">

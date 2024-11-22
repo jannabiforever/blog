@@ -5,10 +5,10 @@
     import SimplifiedPost from "./SimplifiedPost.svelte";
 
     let posts = $state([]);
-    let sorted_by_createdAt = $derived(
-        posts.sort((post) => post.createdAt).reverse(),
-    );
-    let last_three_posts = $derived(sorted_by_createdAt.slice(0, 3));
+    let last_three_posts = $derived(posts.slice(0, 3));
+    onMount(async () => {
+        posts = await fetchPosts();
+    });
 </script>
 
 <div class="recent-posts">
@@ -18,7 +18,7 @@
             No Recent Posts
         </p>
         {#if posts.length != 0}
-            {#each posts as last_three_posts}
+            {#each last_three_posts as post}
                 <SimplifiedPost {post} />
             {/each}
         {/if}
