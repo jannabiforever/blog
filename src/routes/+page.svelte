@@ -57,7 +57,8 @@
         display: block;
         padding: 1rem;
 
-        background-color: green;
+        background-color: black;
+        border-radius: 1rem;
     }
 
     .bio-item img {
@@ -67,6 +68,6 @@
 
     .bio-item a {
         text-decoration: none;
-        color: blue;
+        color: white;
     }
 </style>

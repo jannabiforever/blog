@@ -1,5 +1,5 @@
 <script>
-    import Book from "$lib/components/Book.svelte";
+    import Book from "$lib/components/BookContainer.svelte";
     import { fetchBooks } from "$lib/fetch-books";
     import { onMount } from "svelte";
 

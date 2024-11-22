@@ -4,7 +4,7 @@
 
 <div class="post-container">
     <div class="post-title">
-        <h2><a href="/">{post.title}</a></h2>
+        <h2><a href="/posts/{post.title}">{post.title}</a></h2>
         <p>{post.createdAt}</p>
     </div>
     <p>{post.content}</p>

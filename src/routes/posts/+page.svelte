@@ -1,12 +1,11 @@
 <script>
-    import Post from "$lib/components/Post.svelte";
+    import Post from "$lib/components/PostContainer.svelte";
     import { fetchPosts } from "$lib/fetch-posts";
     import { onMount } from "svelte";
 
     let posts = [];
     onMount(async () => {
         posts = await fetchPosts();
-        console.log(posts);
     });
 </script>
 
