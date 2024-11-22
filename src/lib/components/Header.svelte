@@ -7,17 +7,25 @@
 </header>
 
 <style>
-    .navbar {
+    header {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
         margin: 0;
-        padding: 1rem 5rem 1rem 5rem;
+        padding: 2vh 10vh 2vh 10vh;
     }
 
     .navbar a {
         color: black;
+        font-size: 20px;
         text-decoration: none;
-        margin: 0 1rem;
+        margin: 0 2vh;
     }
 
     .navbar a:hover {

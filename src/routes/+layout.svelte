@@ -11,13 +11,17 @@
 
 <style>
     .main-content {
-        width: 60%;
+        width: 50vw;
         min-height: 100vh;
 
         display: block;
         justify-self: center;
 
-        padding: 2.5rem;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+
+        padding-left: 2vw;
+        padding-right: 2vw;
 
         background-image: url("../../croco.png");
         background-color: rgba(255, 255, 255, 0.9);

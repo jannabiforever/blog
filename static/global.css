@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Nanum+Gothic&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Roboto Condensed", "Nanum Gothic", sans-serif;
+    font-weight: 400;
     margin: 0;
 }
