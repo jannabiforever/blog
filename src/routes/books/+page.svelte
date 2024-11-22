@@ -13,7 +13,7 @@
 
 <div class="books-container">
     {#if books.length === 0}
-        <p>Loading...</p>
+        <p>No Content</p>
     {:else}
         {#each books as book}
             <Book {book} />

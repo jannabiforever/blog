@@ -5,7 +5,7 @@
 <style>
     footer {
         background-color: rgba(245, 245, 245, 0.9);
-        padding: 1rem;
+        padding: 20px;
         margin: 0;
         text-align: center;
     }

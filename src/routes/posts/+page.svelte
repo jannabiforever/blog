@@ -11,7 +11,7 @@
 
 <div class="posts-container">
     {#if posts.length === 0}
-        <p>Loading...</p>
+        <p>No Content</p>
     {:else}
         {#each posts as post}
             <Post {post} />

@@ -1,5 +1,6 @@
 <script>
     import AboutMe from "$lib/components/AboutMe.svelte";
+    import RecentPosts from "$lib/components/RecentPosts.svelte";
 </script>
 
 <div class="profile-container">
@@ -10,6 +11,8 @@
         <AboutMe />
     </div>
 </div>
+
+<RecentPosts />
 
 <style>
     .profile-container {

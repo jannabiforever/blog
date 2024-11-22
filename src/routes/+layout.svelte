@@ -12,13 +12,13 @@
 <style>
     .main-content {
         width: 50vw;
-        min-height: 100vh;
+        min-height: 75vh;
 
         display: block;
         justify-self: center;
 
         padding-top: 5vh;
-        padding-bottom: 5vh;
+        padding-bottom: 3vh;
 
         padding-left: 2vw;
         padding-right: 2vw;
