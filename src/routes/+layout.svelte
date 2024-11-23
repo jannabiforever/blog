@@ -23,7 +23,7 @@
         padding-left: 2vw;
         padding-right: 2vw;
 
-        background-image: url("../../croco.png");
+        background-image: url("/croco.png");
         background-color: rgba(255, 255, 255, 0.9);
         background-blend-mode: overlay;
     }
