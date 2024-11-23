@@ -3,9 +3,7 @@
 </script>
 
 <div class="simplified-post">
-    <span class="post-title"
-        ><a href="/posts/{post.title}">{post.title}</a></span
-    >
+    <span class="post-title"><a href="/posts/{post.id}">{post.title}</a></span>
     <span class="post-created-at">{post.createdAt}</span>
 </div>
 
@@ -17,7 +15,7 @@
     }
 
     .post-title {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .post-title a {
@@ -26,6 +24,6 @@
     }
 
     .post-created-at {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 </style>

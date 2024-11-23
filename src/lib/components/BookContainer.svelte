@@ -1,16 +1,9 @@
 <script>
     import BookStar from "./BookStar.svelte";
-
-    const shortenDescription = (desc) => {
-        if (desc.length > 100) {
-            return desc.slice(0, 100) + "...";
-        } else {
-            return desc;
-        }
-    };
+    import { shortenDesc } from "../shorten-desc";
 
     let { book } = $props();
-    let shortendDescription = $derived(shortenDescription(book.description));
+    let shortendDescription = $derived(shortenDesc(book.description));
 </script>
 
 <div class="book-container">

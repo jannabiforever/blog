@@ -7,7 +7,6 @@
 
     onMount(async () => {
         books = await fetchBooks();
-        console.log(books);
     });
 </script>
 

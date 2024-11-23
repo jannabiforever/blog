@@ -1,5 +1,7 @@
 <script>
-    export let post;
+    import { shortenDesc } from "$lib/shorten-desc";
+    let { post } = $props();
+    let shortendDescription = $derived(shortenDesc(post.content));
 </script>
 
 <div class="post-container">
@@ -7,7 +9,7 @@
         <h2><a href="/posts/{post.id}">{post.title}</a></h2>
         <p>{post.createdAt}</p>
     </div>
-    <p>{post.content}</p>
+    <p>{shortendDescription}</p>
 </div>
 
 <style>

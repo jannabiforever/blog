@@ -3,7 +3,7 @@
     import { fetchPosts } from "$lib/fetch-posts";
     import { onMount } from "svelte";
 
-    let posts = [];
+    let posts = $state([]);
     onMount(async () => {
         posts = await fetchPosts();
     });
