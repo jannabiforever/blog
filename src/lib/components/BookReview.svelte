@@ -1,7 +1,6 @@
 <script>
     import { fetchBookById } from "$lib/fetch-books";
     import { onMount } from "svelte";
-    import BookStar from "./BookStar.svelte";
 
     const { bookId } = $props();
 
@@ -26,7 +25,6 @@
         </span>
         <span class="book-author">
             by. {book.author}
-            <BookStar rate={book.rate} />
         </span>
         <span class="book-main-review">
             {book.description}

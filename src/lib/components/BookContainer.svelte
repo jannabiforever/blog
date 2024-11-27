@@ -1,5 +1,4 @@
 <script>
-    import BookStar from "./BookStar.svelte";
     import { shortenDesc } from "../shorten-desc";
 
     let { book } = $props();
@@ -12,7 +11,6 @@
         <div class="book-title">
             <a href="/books/{book.id}">{book.title}</a>
             <p class="author">by. {book.author}</p>
-            <BookStar rate={book.rate} />
         </div>
         <div class="book-desc">
             <p>{shortendDescription}</p>
