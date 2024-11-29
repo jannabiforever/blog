@@ -1,22 +1,46 @@
 <script lang="ts">
 	import 'carbon-components-svelte/css/all.css';
-	import { Link, OutboundLink } from 'carbon-components-svelte';
+	import { Link, OutboundLink, Toggle } from 'carbon-components-svelte';
 	import { LogoInstagram, LogoGithub } from 'carbon-icons-svelte';
 
 	let { children } = $props();
 	const currentYear: number = new Date().getFullYear();
+
+	let theme = $state('g10');
+	$effect(() => {
+		document.documentElement.setAttribute('theme', theme);
+	});
+
+	$inspect(theme);
+
+	const changeTheme = (isDarkMode: boolean) => {
+		theme = isDarkMode ? 'g100' : 'g10';
+	};
 </script>
 
 <header>
 	<nav>
 		<div class="nav-links">
-			<Link href="/">Home</Link>
-			<Link href="/about">About</Link>
-			<Link href="/posts">Posts</Link>
-			<Link href="/songs">Songs</Link>
+			<Link href="/">
+				<p>Home</p>
+			</Link>
+			<Link href="/about">
+				<p>About</p>
+			</Link>
+			<Link href="/posts">
+				<p>Posts</p>
+			</Link>
+			<Link href="/songs">
+				<p>Songs</p>
+			</Link>
 		</div>
 		<div class="toggle-theme">
-			<button>Toggle Theme</button>
+			<Toggle
+				id="theme-toggle"
+				labelA="Light"
+				labelB="Dark"
+				on:toggle={(e) => changeTheme(e.detail.toggled)}
+			/>
 		</div>
 	</nav>
 </header>
@@ -44,6 +68,28 @@
 </footer>
 
 <style>
+	:global(html) {
+		font-size: 12px;
+	}
+
+	@media screen and (min-width: 768px) {
+		:global(html) {
+			font-size: 16px;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		:global(html) {
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (min-width: 1280px) {
+		:global(html) {
+			font-size: 20px;
+		}
+	}
+
 	header,
 	main,
 	footer {
@@ -65,8 +111,19 @@
 		justify-content: space-between;
 	}
 
+	.nav-links p {
+		align-self: end;
+	}
+
+	main {
+		margin-top: 1rem;
+		min-height: 80vh;
+	}
+
 	.social-links {
 		display: flex;
 		flex-direction: column;
+
+		margin-top: 1rem;
 	}
 </style>
