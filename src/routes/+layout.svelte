@@ -11,8 +11,6 @@
 		document.documentElement.setAttribute('theme', theme);
 	});
 
-	$inspect(theme);
-
 	const changeTheme = (isDarkMode: boolean) => {
 		theme = isDarkMode ? 'g100' : 'g10';
 	};
@@ -23,9 +21,6 @@
 		<div class="nav-links">
 			<Link href="/">
 				<p>Home</p>
-			</Link>
-			<Link href="/about">
-				<p>About</p>
 			</Link>
 			<Link href="/posts">
 				<p>Posts</p>
@@ -74,19 +69,19 @@
 
 	@media screen and (min-width: 768px) {
 		:global(html) {
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 
 	@media screen and (min-width: 1024px) {
 		:global(html) {
-			font-size: 18px;
+			font-size: 16px;
 		}
 	}
 
 	@media screen and (min-width: 1280px) {
 		:global(html) {
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 
@@ -118,6 +113,10 @@
 	main {
 		margin-top: 1rem;
 		min-height: 80vh;
+	}
+
+	footer {
+		padding-top: 1.5vh;
 	}
 
 	.social-links {
