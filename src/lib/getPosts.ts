@@ -6,4 +6,4 @@ const Post1: App.Post = {
 	imageSource: null
 };
 
-export const posts: () => App.Post[] = () => [Post1];
+export const getPosts: () => App.Post[] = () => [Post1];

@@ -9,6 +9,15 @@ declare global {
 			tags: string[];
 			imageSource: string | null;
 		}
+
+		interface Song {
+			title: string;
+			album: string;
+			artist: string;
+			description: string;
+			tags: string[];
+			imageSource: string | null;
+		}
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
