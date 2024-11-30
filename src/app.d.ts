@@ -4,7 +4,7 @@ declare global {
 	namespace App {
 		interface Post {
 			title: string;
-			content: string;
+			content: string[];
 			createdAt: string;
 			tags: string[];
 			imageSource: string | null;
@@ -14,7 +14,7 @@ declare global {
 			title: string;
 			album: string;
 			artist: string;
-			description: string;
+			description: string[];
 			tags: string[];
 			imageSource: string | null;
 		}
