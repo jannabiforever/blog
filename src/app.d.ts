@@ -2,6 +2,13 @@
 // for information about these interfaces
 declare global {
 	namespace App {
+		interface Post {
+			title: string;
+			content: string;
+			createdAt: string;
+			tags: string[];
+			imageSource: string | null;
+		}
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}

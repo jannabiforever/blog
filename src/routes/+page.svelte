@@ -28,7 +28,7 @@
 					<AccordionItem title="What is this blog for?">
 						<div>This blog is where I share my thoughts.</div>
 						<div>
-							I’ll do my best to keep the posts in English,
+							I'll do my best to keep the posts in English,
 							<br />
 							but occasionally, I might write in Korean.
 						</div>
