@@ -9,7 +9,7 @@
 	<div class="text-area">
 		<div class="title">
 			<h2>
-				<a href="/">
+				<a href="/posts/{post.title}">
 					{post.title}
 					<p>{post.createdAt}</p>
 				</a>
