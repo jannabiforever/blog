@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatContents } from '$lib/util';
+	import { Link } from 'carbon-components-svelte';
 	let { song }: { song: App.Song } = $props();
 
 	let hasImage = song.imageSource !== null;
@@ -8,11 +9,11 @@
 <div class="main-container">
 	<div class="text-area">
 		<div class="title">
-			<h2>
-				<a href="/posts/{song.title}">
+			<Link href="/songs/{song.title}">
+				<h2>
 					{song.title}
-				</a>
-			</h2>
+				</h2>
+			</Link>
 		</div>
 		<div class="content">
 			<p>{formatContents(song.description)}</p>
@@ -36,7 +37,7 @@
 		width: 70%;
 	}
 
-	.title h2 a {
+	.title h2 {
 		display: flex;
 		gap: 1rem;
 

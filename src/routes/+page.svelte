@@ -45,7 +45,7 @@
 						</div>
 						<div>I've never completed a full year of university studies.</div>
 						<div>
-							I've studied QFT, cosmology, and a bit of string theory, as well as a great deal of
+							I've studied QFT, cosmology, and a bit of string theory, as well as a slight deal of
 							computer engineering knowledge on my own.
 						</div>
 					</AccordionItem>

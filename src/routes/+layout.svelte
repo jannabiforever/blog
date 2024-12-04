@@ -63,6 +63,16 @@
 </footer>
 
 <style>
+	header,
+	main,
+	footer {
+		padding: 0 15vw;
+	}
+
+	header {
+		padding-top: 1vh;
+	}
+
 	:global(html) {
 		font-size: 12px;
 	}
@@ -77,22 +87,18 @@
 		:global(html) {
 			font-size: 16px;
 		}
+
+		header,
+		main,
+		footer {
+			padding: 0 20vw;
+		}
 	}
 
 	@media screen and (min-width: 1280px) {
 		:global(html) {
 			font-size: 18px;
 		}
-	}
-
-	header,
-	main,
-	footer {
-		padding: 0 20vw;
-	}
-
-	header {
-		padding-top: 1vh;
 	}
 
 	nav {

@@ -1,19 +1,21 @@
 <script lang="ts">
 	import { formatContents } from '$lib/util';
+	import { Link } from 'carbon-components-svelte';
 	let { post }: { post: App.Post } = $props();
 
 	let hasImage = post.imageSource !== null;
+	let isDarkMode = $state('g10');
 </script>
 
 <div class="main-container">
 	<div class="text-area">
 		<div class="title">
-			<h2>
-				<a href="/posts/{post.title}">
-					{post.title}
+			<Link href="/posts/{post.title}">
+				<div class="link">
+					<h2>{post.title}</h2>
 					<p>{post.createdAt}</p>
-				</a>
-			</h2>
+				</div>
+			</Link>
 		</div>
 		<div class="content">
 			<p>{formatContents(post.content)}</p>
@@ -37,7 +39,7 @@
 		width: 70%;
 	}
 
-	.title h2 a {
+	.link {
 		display: flex;
 		gap: 1rem;
 

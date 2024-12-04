@@ -8,3 +8,7 @@ const Song1: App.Song = {
 }
 
 export const getSongs: () => App.Song[] = () => [Song1];
+export const getSongByTitle: (title: string) => App.Song | undefined = (title) => {
+	const songs = getSongs();
+	return songs.find((song ) => song.title === title);
+};

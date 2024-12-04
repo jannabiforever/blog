@@ -15,3 +15,7 @@ const Post2: App.Post = {
 };
 
 export const getPosts: () => App.Post[] = () => [Post1, Post2];
+export const getPostByTitle: (title: string) => App.Post | undefined = (title) => {
+	const posts = getPosts();
+	return posts.find((post) => post.title === title);
+};
