@@ -107,6 +107,10 @@
 		width: 65%;
 	}
 
+	.main-content h1 {
+		margin-bottom: 1rem;
+	}
+
 	.bio {
 		margin-top: 1rem;
 	}
