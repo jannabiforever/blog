@@ -30,7 +30,7 @@
 <ul class="list-none p-0">
 	{#each posts as post (post)}
 		<li class="group cursor-pointer py-2 text-xl font-semibold hover:bg-white active:bg-white">
-			<a href="/post/{post}" class="flex w-full flex-wrap no-underline">
+			<a href="/post?id={post}" class="flex w-full flex-wrap no-underline">
 				<span
 					class="mr-2 text-xl font-semibold break-keep text-white group-hover:text-black group-active:text-black"
 				>
