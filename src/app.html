@@ -4,9 +4,14 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style lang="text/css">
+			body {
+				font-family: 'jetbrains-mono', monospace;
+			}
+		</style>
 		%sveltekit.head%
 	</head>
-	<body class="bg-gray-700" data-sveltekit-preload-data="hover">
+	<body class="flex min-h-screen flex-col" data-sveltekit-preload-data="hover">
 		<div>%sveltekit.body%</div>
 	</body>
 </html>
