@@ -87,8 +87,6 @@
 
 <footer class="mt-10">
 	<div class="flex justify-center">
-		<p class="anchor-font-color text-center text-sm">
-			© 2025 Jungin's Dev Blog. All rights reserved.
-		</p>
+		<p class="text-center text-sm">© 2025 Jungin's Dev Blog. All rights reserved.</p>
 	</div>
 </footer>
