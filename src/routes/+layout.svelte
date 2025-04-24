@@ -1,8 +1,30 @@
 <script lang="ts">
-	import '../app.css';
+	import { Switch } from '@skeletonlabs/skeleton-svelte';
+	import IconMoon from '@lucide/svelte/icons/moon';
+	import IconSun from '@lucide/svelte/icons/sun';
 	import { Github, Instagram } from '@lucide/svelte';
+	import { browser } from '$app/environment';
+	import '../app.css';
 
 	let { children } = $props();
+
+	// Get default theme from local storage
+	const theme = browser ? (localStorage.getItem('theme') === 'light' ? 'light' : 'dark') : 'light';
+
+	let isLightMode = $state(theme === 'light');
+	$effect(() => {
+		// try update local storage when mode changes
+		if (browser) {
+			localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+		}
+
+		// set document class as mode
+		document.documentElement.setAttribute('data-mode', isLightMode ? 'light' : 'dark');
+	});
+
+	function handleModeChange(checked: boolean) {
+		isLightMode = checked;
+	}
 </script>
 
 <header class=" sticky top-0 z-50 flex h-[70px] w-full items-center border backdrop-blur-lg">
@@ -18,8 +40,17 @@
 		<div></div>
 
 		<!-- Right -->
-		<div class="flex items-stretch justify-end gap-2">
+		<div class="flex items-stretch justify-end gap-3">
 			<!-- TOOD: light switch -->
+			<Switch
+				name="mode"
+				controlActive="bg-surface-200"
+				checked={isLightMode}
+				onCheckedChange={(e) => handleModeChange(e.checked)}
+			>
+				{#snippet inactiveChild()}<IconMoon size="14" />{/snippet}
+				{#snippet activeChild()}<IconSun size="14" />{/snippet}
+			</Switch>
 			<!-- Divider -->
 			<span class="border-surface-200-800 border-r"></span>
 			<!-- Social -->

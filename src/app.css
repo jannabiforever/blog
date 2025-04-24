@@ -8,9 +8,16 @@
 @import '@skeletonlabs/skeleton/themes/terminus';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+@custom-variant dark (&:where([data-mode=dark], [data-mode=dark] *));
 
 body {
+	/* Background */
 	background-color: var(--body-background-color);
+	@variant dark {
+		background-color: var(--body-background-color-dark);
+	}
+
+	/* Typography */
 	color: var(--base-font-color);
 	font-family: var(--base-font-family);
 	font-size: var(--base-font-size);
@@ -18,4 +25,7 @@ body {
 	font-weight: var(--base-font-weight);
 	font-style: var(--base-font-style);
 	letter-spacing: var(--base-letter-spacing);
+	@variant dark {
+		color: var(--base-font-color-dark);
+	}
 }
