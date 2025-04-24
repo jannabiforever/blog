@@ -5,10 +5,17 @@
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/cerberus';
+@import '@skeletonlabs/skeleton/themes/terminus';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
-@font-face {
-	font-family: 'jetbrains-mono';
-	src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+body {
+	background-color: var(--body-background-color);
+	color: var(--base-font-color);
+	font-family: var(--base-font-family);
+	font-size: var(--base-font-size);
+	line-height: var(--base-line-height);
+	font-weight: var(--base-font-weight);
+	font-style: var(--base-font-style);
+	letter-spacing: var(--base-letter-spacing);
 }
