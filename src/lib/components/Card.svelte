@@ -12,7 +12,7 @@
 </script>
 
 <a
-	href="/"
+	href="/post/{title}"
 	class="card preset-filled-surface-100-900 border-surface-200-800 card-hover divide-surface-200-800 block max-w-md divide-y overflow-hidden border-[1px]"
 >
 	<header>

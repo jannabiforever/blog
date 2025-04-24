@@ -1,0 +1,57 @@
+# 🚀 Understanding Rust's Asynchronous Handling
+
+Rust's async model is **unique** compared to other popular languages like JavaScript or Python. Instead of using a built-in runtime, Rust provides **zero-cost abstractions** for async behavior via the `async/.await` syntax and relies on **external runtimes** like `tokio` or `async-std`.
+
+## 🔧 The Core Concepts
+
+1. **Futures**
+   - Rust's async system is based on the `Future` trait.
+   - An `async fn` returns a `Future` that does nothing until it is *polled*.
+
+2. **Poll-based Execution**
+   - A future is like a state machine. When it is polled, it progresses a bit, then yields control.
+   - Runtimes like `tokio` handle the polling for you.
+
+3. **No Built-in Runtime**
+   - Unlike JavaScript's event loop, Rust has no built-in async executor.
+   - This makes the model more flexible and predictable, but requires setup.
+
+## 📦 Example
+
+```rust
+use tokio::time::{sleep, Duration};
+
+#[tokio::main]
+async fn main() {
+    println!("Waiting...");
+    sleep(Duration::from_secs(2)).await;
+    println!("Done!");
+}
+```
+
+- `tokio::main` sets up the async runtime.
+- `sleep` returns a future that will be polled until the time elapses.
+
+## ⚠️ Interesting Quirk
+
+> Even though `async fn` looks like it runs something, **nothing happens** until `.await` or an executor drives it.
+
+```rust
+async fn my_task() {
+    println!("Running task!");
+}
+
+// This does nothing!
+let fut = my_task();
+```
+
+## 🧠 Why This Matters
+
+Rust's model gives:
+- 💡 **Fine-grained control** over concurrency
+- ⚡ **High performance** with minimal overhead
+- 🛠️ **More responsibility**, but also more power
+
+---
+
+_Async in Rust is like building your own race car. It won’t go anywhere until you start the engine, but once it does, it's blazing fast and fully under your control._
