@@ -27,7 +27,7 @@
 	}
 </script>
 
-<header class=" sticky top-0 z-50 flex h-[70px] w-full items-center border backdrop-blur-lg">
+<header class="sticky top-0 z-50 flex h-[70px] w-full items-center border backdrop-blur-lg">
 	<div
 		class="container mx-auto grid max-w-screen-2xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 xl:grid-cols-[1fr_auto_1fr] xl:px-10"
 	>
@@ -77,10 +77,8 @@
 	</div>
 </header>
 
-<div
-	class="container mx-auto grid grid-cols-1 px-4 xl:grid-cols-[240px_minmax(0px,_1fr)_280px] xl:px-10"
->
-	<main class="mx-auto my-24 flex max-w-2xl flex-col gap-16 px-4">
+<div class="container mx-auto grid grid-cols-1">
+	<main class="mx-auto my-24 flex w-full px-4">
 		{@render children()}
 	</main>
 </div>
