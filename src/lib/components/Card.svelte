@@ -1,18 +1,11 @@
 <script lang="ts">
-	const {
-		imgSrc,
-		postCategory,
-		title,
-		content,
-		dateString
-	}: { imgSrc: string; postCategory: string; title: string; content: string; dateString: string } =
-		$props();
+	const { imgSrc, post }: { imgSrc: string; post: App.Post } = $props();
 	const MAX_CONTENT_LENGTH = 252;
-	let shortenedContent = content.slice(0, MAX_CONTENT_LENGTH) + '...';
+	let shortenedContent = post.content.toString().slice(0, MAX_CONTENT_LENGTH) + '...';
 </script>
 
 <a
-	href="/post/{title}"
+	href="/post/{post.id}"
 	class="card preset-filled-surface-100-900 border-surface-200-800 card-hover divide-surface-200-800 block max-w-md divide-y overflow-hidden border-[1px]"
 >
 	<header>
@@ -20,8 +13,8 @@
 	</header>
 	<article class="space-y-4 p-4">
 		<div>
-			<h2 class="h6">{postCategory}</h2>
-			<h3 class="h3">{title}</h3>
+			<h2 class="h6">{post.category}</h2>
+			<h3 class="h3">{post.title}</h3>
 		</div>
 		<p class="opacity-60">
 			{shortenedContent}
@@ -29,6 +22,6 @@
 	</article>
 	<footer class="flex items-center justify-between gap-4 p-4">
 		<small class="opacity-60">By Jungin</small>
-		<small class="opacity-60">On {dateString}</small>
+		<small class="opacity-60">On {post.createdAt.toLocaleDateString()}</small>
 	</footer>
 </a>
