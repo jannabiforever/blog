@@ -8,12 +8,12 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
-		interface Post {
+		interface PostMetadata {
 			id: number;
 			title: string;
 			createdAt: Date;
 			category: string;
-			content: string;
+			imgSrc: string;
 		}
 	}
 }

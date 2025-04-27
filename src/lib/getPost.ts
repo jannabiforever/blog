@@ -1,23 +1,25 @@
-export async function getPost(id: number): Promise<App.Post | null> {
-	const allPosts = await getAllPosts();
+export async function getPostMetadata(id: number): Promise<App.PostMetadata | null> {
+	const allPosts = await getAllPostMetadatum();
 	return allPosts.find((post) => post.id === id) || null;
 }
 
-export async function getAllPosts(): Promise<App.Post[]> {
+export async function getAllPostMetadatum(): Promise<App.PostMetadata[]> {
 	return [
 		{
 			id: 1,
 			title: 'The First Post',
 			createdAt: new Date('2023-01-01'),
 			category: 'Uncategorized',
-			content: 'This is the content of the first post.'
+			imgSrc:
+				'https://machinelearningmastery.com/wp-content/uploads/2017/01/A-Gentle-Introduction-to-the-Random-Walk-for-Times-Series-Forecasting-with-Python.jpg'
 		},
 		{
 			id: 2,
 			title: 'The Second Post',
 			createdAt: new Date('2023-01-02'),
 			category: 'Uncategorized',
-			content: 'This is the content of the second post.'
+			imgSrc:
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Nile_crocodile_head.jpg/960px-Nile_crocodile_head.jpg'
 		}
 	];
 }
