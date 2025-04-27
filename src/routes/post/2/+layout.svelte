@@ -5,7 +5,7 @@
 </script>
 
 <div>
-	{#if data}
+	{#if data.postMetadata}
 		<PostContainer postMetadata={data.postMetadata}>
 			{@render children()}
 		</PostContainer>
