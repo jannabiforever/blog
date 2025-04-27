@@ -12,14 +12,6 @@ export async function getAllPostMetadatum(): Promise<App.PostMetadata[]> {
 			category: 'Uncategorized',
 			imgSrc:
 				'https://machinelearningmastery.com/wp-content/uploads/2017/01/A-Gentle-Introduction-to-the-Random-Walk-for-Times-Series-Forecasting-with-Python.jpg'
-		},
-		{
-			id: 2,
-			title: 'The Second Post',
-			createdAt: new Date('2023-01-02'),
-			category: 'Uncategorized',
-			imgSrc:
-				'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Nile_crocodile_head.jpg/960px-Nile_crocodile_head.jpg'
 		}
 	];
 }

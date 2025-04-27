@@ -5,7 +5,7 @@
 </script>
 
 <div class="container grid w-3/4 grid-cols-3 gap-8">
-	{#each data.allPosts.entries() as [id, post] (id)}
-		<Card {post} />
+	{#each data.allPosts.entries() as [id, postMetadata] (id)}
+		<Card {postMetadata} />
 	{/each}
 </div>
