@@ -1,38 +1,22 @@
-# sv
+# SvelteKit Blog
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Welcome to my SvelteKit blog! This is a personal space where I share insights, tutorials, and thoughts on various topics. Built with the power of SvelteKit, this blog is designed to be fast, modern, and user-friendly.
 
-## Creating a project
+## Visit the Blog
 
-If you're seeing this, you've probably already done this step. Congrats!
+You can explore the blog by visiting the following link:
 
-```bash
-# create a new project in the current directory
-npx sv create
+[https://nobugjustjungin.netlify.app/](https://nobugjustjungin.netlify.app/)
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Getting Started
 
-## Developing
+If you're interested in how this blog was built or want to create something similar, feel free to explore the SvelteKit documentation:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+[SvelteKit Documentation](https://kit.svelte.dev/docs)
 
-```bash
-npm run dev
+## Feedback and Contributions
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Your feedback is always welcome!
+If you have suggestions, ideas, or just want to say hi, feel free to reach out.
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Happy reading!
