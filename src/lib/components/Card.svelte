@@ -12,7 +12,11 @@
 		</header>
 		<article class="space-y-4 p-4">
 			<div>
-				<h2 class="h6">{postMetadata.category}</h2>
+				<h6 class="h6 anchor-font-color flex gap-2">
+					{#each postMetadata.category.entries() as [i, category] (i)}
+						<span class="inline">#{category}</span>
+					{/each}
+				</h6>
 				<h3 class="h3">{postMetadata.title}</h3>
 			</div>
 		</article>

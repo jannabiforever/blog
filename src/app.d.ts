@@ -12,7 +12,7 @@ declare global {
 			id: number;
 			title: string;
 			createdAt: Date;
-			category: string;
+			category: string[];
 			imgSrc: string;
 		}
 	}
