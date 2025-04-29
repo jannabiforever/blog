@@ -1,3 +1,11 @@
+<script lang="ts">
+	import Warning from '$lib/components/Warning.svelte';
+	import Code from '$lib/components/Code.svelte';
+	import type { PageProps } from './$types';
+
+	let { data }: PageProps = $props();
+</script>
+
 <p class="pb-4 text-justify text-lg">
 	내가 Rust를 과도하게 사랑하는 건지, 요즘 손이 가는 기술들은 하나 같이 다 Rust로 만들어진 것들이다.
 	<a href="https://www.surrealdb.com" class="anchor">SurrealDB</a>가 그 시작이었고, 그 다음은
@@ -17,14 +25,32 @@
 		href="https://github.com/meilisearch/meilisearch/tree/main/crates/milli"
 		class="anchor"
 	>
-		MeiliSearch 인덱싱 크레이트
+		MeiliSearch 엔진 소스 리포지토리
 	</a>)
 </p>
+<Warning>
+	<p class="text-sm">
+		읽기 쉬운 코드 베이스는 아니다. 부실한 코멘트와 약간 규격이 없는 듯한 구조 때문인데, 걍 감안하고
+		보도록 하자.
+	</p>
+</Warning>
+<h2 class="h2 pb-4">인덱스</h2>
 <p class="pb-4 text-justify text-lg">
-	이렇게 큰 프로젝트가 이따구로 코멘트가 부실하면 어쩌자는 건지 모르겠다. 관리 안 되는 오픈 소스는
-	이래서 문제다. SurrealDB는 정말 관리를 잘 해놓아서 코드만 차근히 읽어도 다 이해가 되는데, 좀 보고
-	배우자.
+	다음은 MeiliSearch 내부 엔진에서 사용하는 Index 스트럭트 구조이다.
+</p>
+<Code code={data.sourceCodes[0].code} lang={data.sourceCodes[0].lang} />
+<p class="pb-4 text-justify text-lg">
+	기본적으로 MeiliSearch는 도큐먼트 기반 인덱싱을 사용한다. 도큐먼트 기반 인덱싱이란 그냥 말 그대로
+	하나의 데이터를 구성하는 모든 필드를 인덱싱하는 방식인데, 위 구성 요소를 보면 알겠지만 진짜
+	인덱스로 쓸 수 있는 모든 방식의 요소를 다 Roaring Bitmap 구조로 분해하여 LMDB 안에 집어 넣고 있다.
 </p>
 <p class="pb-4 text-justify text-lg">
-	MeiliSearch의 기본 사양 중 가장 눈여겨볼만한 점은 바로 매우 유연한 타입 시스템에 있다.
+	여기서 마지막에서 두 번째 필드를 보면 임베딩 벡터 LMDB도 있는데, 여기 보면 Arroy라는 게 있는데
+	이건 오타가 아니고 MeiliSearch 내부에서 사용하는 ANN 모델이다. (<a
+		href="https://github.com/meilisearch/arroy"
+		class="anchor">Arroy 리포지토리</a
+	>) 트리 구조가 조금 신기한데, 분기 노드가 따로 있다고 한다. 원본이 바뀌는 과정을 좀 더 메모리
+	효율적이게 수행하기 위함이다. 이걸 incremental indexing이라고 하는데, 뭐 내부는 알아서 잘
+	해놨겠거니 하고 디테일은 귀찮아서 제대로 보진 않았다. 나중에 자기 전에 쭉 읽어나 볼까 생각 중이다.
+	(요건 좀 깔끔하다. 처음부터 이걸 볼 걸...)
 </p>
