@@ -4,7 +4,7 @@
 	let { data, children } = $props();
 </script>
 
-<div>
+<div class="container">
 	{#if data.postMetadata}
 		<PostContainer postMetadata={data.postMetadata}>
 			{@render children()}

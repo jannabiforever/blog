@@ -46,6 +46,6 @@ body {
 .shiki {
 	padding: 1rem;
 	text-overflow: ellipsis;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	overflow: hidden;
 }
