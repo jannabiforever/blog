@@ -5,7 +5,7 @@
 <div>
 	<a
 		href="/post/{postMetadata.id}"
-		class="card preset-filled-surface-100-900 border-surface-200-800 card-hover divide-surface-200-800 block max-w-md divide-y overflow-hidden border-[1px]"
+		class="card preset-filled-surface-100-900 border-surface-200-800 card-hover divide-surface-200-800 flex max-w-md flex-col divide-y overflow-hidden border-[1px]"
 	>
 		<header class="aspect-[21/9] overflow-hidden">
 			<img src={postMetadata.imgSrc} class="h-full w-full object-cover" alt="banner" />
