@@ -30,6 +30,7 @@ body {
 	}
 }
 
+/* shiki */
 .shiki,
 .shiki span {
 	background-color: var(--shiki-background-color);
@@ -48,4 +49,25 @@ body {
 	text-overflow: ellipsis;
 	font-size: 0.8rem;
 	overflow: hidden;
+}
+
+/* mdsvex */
+.mdsvex-container {
+	@apply container;
+}
+
+.mdsvex-container p {
+	@apply pb-4 text-justify text-sm;
+}
+
+.mdsvex-container h1 {
+	@apply h1 pb-4;
+}
+
+.mdsvex-container h2 {
+	@apply h2 pb-4;
+}
+
+.mdsvex-container a {
+	@apply anchor;
 }
