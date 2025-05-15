@@ -24,6 +24,14 @@ export async function getAllPostMetadatum(): Promise<App.PostMetadata[]> {
 			category: ['DB', 'BaaS', 'Rust'],
 			imgSrc:
 				'https://repository-images.githubusercontent.com/436658287/48975688-cf92-4b36-9fe1-fbe0a492a74b'
+		},
+		{
+			id: 3,
+			title: 'Ugly Programming Language',
+			createdAt: new Date('2024-05-02'),
+			category: ['Java', 'Javascript', 'Rust'],
+			imgSrc:
+				'https://cdn.prod.website-files.com/60c9c0b391375d23f6b0931f/6400750989805400b1ab8688_Are%20There%20Ugly%20Languages%20MI.png'
 		}
 	];
 }
