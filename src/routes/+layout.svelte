@@ -41,7 +41,7 @@
 
 		<!-- Right -->
 		<div class="flex items-stretch justify-end gap-3">
-			<!-- TOOD: light switch -->
+			<!-- theme switch toggle -->
 			<Switch
 				name="mode"
 				controlActive="bg-surface-200"
@@ -55,6 +55,7 @@
 			<span class="border-surface-200-800 border-r"></span>
 			<!-- Social -->
 			<nav class="flex items-center gap-1">
+				<!-- github -->
 				<a
 					class="btn-icon hover:preset-tonal"
 					href="https://github.com/jannabiforever"
@@ -63,7 +64,7 @@
 				>
 					<Github />
 				</a>
-
+				<!-- instagram -->
 				<a
 					class="btn-icon hover:preset-tonal"
 					href="https://instagram.com/4ortis_mane"
