@@ -41,3 +41,8 @@ export async function getAllPostMetadatum(): Promise<App.PostMetadata[]> {
 	}
 	return postMetaDatum;
 }
+
+export async function getPostMetadata(id: number): Promise<App.PostMetadata | null> {
+	const allPost = await getAllPostMetadatum();
+	return allPost.find((pm) => pm.id === id) ?? null;
+}

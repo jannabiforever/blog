@@ -79,7 +79,7 @@
 </header>
 
 <div class="container mx-auto grid min-h-screen grid-cols-1">
-	<main class="mx-auto my-24 flex w-full justify-center px-4">
+	<main class="mx-auto my-24 flex justify-center px-4">
 		{@render children()}
 	</main>
 </div>

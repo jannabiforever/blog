@@ -4,7 +4,7 @@
 
 <div>
 	<a
-		href="/{postMetadata.id}"
+		href="/posts/{postMetadata.id}"
 		class="card preset-filled-surface-100-900 border-surface-200-800 card-hover divide-surface-200-800 flex max-w-md flex-col divide-y overflow-hidden border-[1px]"
 	>
 		<header class="aspect-[21/9] overflow-hidden">
