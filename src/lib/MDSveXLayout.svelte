@@ -3,5 +3,7 @@
 </script>
 
 <div class="mdsvex-container">
-	{@render children()}
+	{#if children}
+		{@render children()}
+	{/if}
 </div>
