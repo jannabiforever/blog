@@ -2,7 +2,7 @@
 	let { children } = $props();
 </script>
 
-<div class="mdsvex-container">
+<div class="prose dark:prose-invert">
 	{#if children}
 		{@render children()}
 	{/if}
