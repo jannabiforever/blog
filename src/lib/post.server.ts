@@ -1,10 +1,4 @@
-import { readFile } from 'node:fs/promises';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const postDataFilePath = join(__dirname, 'data.json');
+import datajson from './data.json';
 
 interface PostMetadataJson {
 	id: number;
@@ -29,13 +23,8 @@ let postMetaDatum: App.PostMetadata[] | null = null;
 
 export async function getAllPostMetadatum(): Promise<App.PostMetadata[]> {
 	if (!postMetaDatum) {
-		const data: App.PostMetadata[] = await readFile(postDataFilePath).then((f) => {
-			const objectArray: PostMetadataJson[] = JSON.parse(f.toString());
-			const data: App.PostMetadata[] = [];
-			objectArray.forEach((pmj) => data.push(deserialize_post_metadata(pmj)));
-			return data;
-		});
-
+		const data: App.PostMetadata[] = [];
+		datajson.forEach((pmj) => data.push(deserialize_post_metadata(pmj)));
 		postMetaDatum = data;
 		return data;
 	}
