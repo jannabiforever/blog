@@ -1,8 +1,8 @@
-import { getAllPostMetadatum } from '$lib/post.server';
+import { getAllPostMetadatum } from '$lib/post';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = () => {
 	return {
-		allPosts: await getAllPostMetadatum()
+		allPosts: getAllPostMetadatum()
 	};
 };

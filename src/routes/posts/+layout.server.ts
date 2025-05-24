@@ -1,4 +1,4 @@
-import { getPostMetadata } from '$lib/post.server';
+import { getPostMetadata } from '$lib/post';
 import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 
@@ -9,7 +9,7 @@ export const load: LayoutServerLoad = async ({ url }) => {
 			throw Error('unreachable');
 		}
 
-		const postMetadata: App.PostMetadata | null = await getPostMetadata(id);
+		const postMetadata: App.PostMetadata | null = getPostMetadata(id);
 
 		return {
 			postMetadata
